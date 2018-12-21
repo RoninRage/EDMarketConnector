@@ -237,6 +237,3 @@ except companion.SKUError as e:
 except companion.CredentialsError as e:
     sys.stderr.write('Invalid Credentials\n')
     sys.exit(EXIT_CREDENTIALS)
-except companion.VerificationRequired:
-    sys.stderr.write('Verification Required\n')
-    sys.exit(EXIT_VERIFICATION)

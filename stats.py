@@ -189,8 +189,6 @@ class StatsDialog():
 
         try:
             data = companion.session.profile()
-        except companion.VerificationRequired:
-            return prefs.AuthenticationDialog(self.parent, partial(self.verify, self.showstats))
         except companion.ServerError as e:
             self.status['text'] = str(e)
             return
